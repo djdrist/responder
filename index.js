@@ -5,8 +5,9 @@ const makeRepositories = require('./middleware/repositories')
 
 const questionsRoutes = require('./routes/questions.routes')
 
-const STORAGE_FILE_PATH = 'questions.json'
-const PORT = 3000
+const STORAGE_FILE_PATH =
+  process.env.NODE_ENV !== 'test' ? 'questions.json' : 'test-questions.json'
+const PORT = process.env.NODE_ENV !== 'test' ? 3000 : 3001
 
 const app = express()
 
@@ -24,3 +25,5 @@ app.use('/questions', questionsRoutes)
 app.listen(PORT, () => {
   console.log(`Responder app listening on port ${PORT}`)
 })
+
+module.exports = app
