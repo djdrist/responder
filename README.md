@@ -10,7 +10,7 @@ The solution is a basic skeleton of `express.js` app:
 
 1. The starting point is `index.js` - it contains the routes definitions. Most of them are empty and should be implemented as part of solving this exercise. Use the `GET /questions` route as a reference.
 2. The `repositories/question.js` holds the data store (which is a simple file, stored on disk) for questions and answers. It also has functions that require implementation.
-3. Ther is also a test file for `question repository`. Put your repository tests there.
+3. There is also a test file for `question repository`. Put your repository tests there.
 4. The `middleware/repositories.js` hooks a repository into the `req` object of `express.js`. No need to extend anything here.
 
 ## Some assumptions
